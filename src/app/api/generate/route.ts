@@ -15,13 +15,15 @@ export async function POST(req: NextRequest) {
 
     const iconPrompt = `A clean, flat icon design on a solid colored background: ${prompt.trim()}. Minimal, vector-style, game icon, sharp edges, vibrant colors, centered composition.`;
 
-    const result = await fal.subscribe("fal-ai/nano-banana-pro", {
+    const result = await fal.subscribe("fal-ai/nano-banana-2", {
       input: {
         prompt: iconPrompt,
         num_images: 1,
-        resolution: "1K",
         aspect_ratio: "1:1",
         output_format: "png",
+        safety_tolerance: "4",
+        resolution: "0.5K",
+        limit_generations: true,
       },
     });
 

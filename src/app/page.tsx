@@ -33,7 +33,7 @@ const pricingTiers = [
     period: "",
     description: "Try it out",
     icons: 3,
-    features: ["3 generations", "1K resolution", "PNG export", "BG removal"],
+    features: ["3 generations", "512px output", "PNG export", "BG removal"],
     cta: "start",
     highlighted: false,
   },
@@ -43,7 +43,7 @@ const pricingTiers = [
     period: "one-time",
     description: "For small projects",
     icons: 15,
-    features: ["15 generations", "1K resolution", "PNG export", "BG removal", "Commercial use"],
+    features: ["15 generations", "512px output", "PNG export", "BG removal", "Commercial use"],
     cta: "buy starter",
     highlighted: false,
   },
@@ -53,7 +53,7 @@ const pricingTiers = [
     period: "one-time",
     description: "Best value",
     icons: 50,
-    features: ["50 generations", "1K resolution", "PNG export", "BG removal", "Commercial use", "Priority queue"],
+    features: ["50 generations", "512px output", "PNG export", "BG removal", "Commercial use", "Priority queue"],
     cta: "buy pro",
     highlighted: true,
   },
@@ -63,7 +63,7 @@ const pricingTiers = [
     period: "one-time",
     description: "For teams",
     icons: 150,
-    features: ["150 generations", "1K resolution", "PNG export", "BG removal", "Commercial use", "Priority queue", "Bulk export"],
+    features: ["150 generations", "512px output", "PNG export", "BG removal", "Commercial use", "Priority queue", "Bulk export"],
     cta: "buy business",
     highlighted: false,
   },
@@ -148,7 +148,7 @@ export default function Home() {
 
           {/* Terminal-style info */}
           <div className="mt-8 font-mono text-[10px] text-zinc-700">
-            <span className="text-zinc-500">$</span> roicons --model nano-banana-pro --res 1k --bg-remove
+            <span className="text-zinc-500">$</span> roicons --model nano-banana-2 --res 0.5k --bg-remove
           </div>
         </section>
 
