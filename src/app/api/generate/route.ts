@@ -7,14 +7,11 @@ fal.config({
 
 export async function POST(req: NextRequest) {
   try {
-    const { prompt, aspectRatio } = await req.json();
+    const { prompt } = await req.json();
 
     if (!prompt || typeof prompt !== "string" || prompt.trim().length < 3) {
       return NextResponse.json({ error: "Prompt must be at least 3 characters" }, { status: 400 });
     }
-
-    const validRatios = ["1:1", "16:9", "9:16", "4:3", "3:4"];
-    const ratio = validRatios.includes(aspectRatio) ? aspectRatio : "1:1";
 
     const iconPrompt = `A clean, flat icon design on a solid colored background: ${prompt.trim()}. Minimal, vector-style, game icon, sharp edges, vibrant colors, centered composition.`;
 
@@ -23,7 +20,7 @@ export async function POST(req: NextRequest) {
         prompt: iconPrompt,
         num_images: 1,
         resolution: "1K",
-        aspect_ratio: ratio,
+        aspect_ratio: "1:1",
         output_format: "png",
       },
     });
