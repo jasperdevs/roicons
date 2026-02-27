@@ -5,18 +5,18 @@ import { Button } from "@/components/ui/button";
 
 export function Navbar() {
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-white/[0.06] bg-black/80 backdrop-blur-md">
+    <nav className="fixed top-0 z-50 w-full border-b border-[#2e3135] bg-[#191b20]/95 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="font-mono text-sm font-bold tracking-tight text-white">
+        <Link href="/" className="text-base font-bold text-white tracking-tight">
           RoIcons
         </Link>
-        <div className="flex items-center gap-6">
-          <Link href="/#pricing" className="font-mono text-xs text-zinc-500 hover:text-white transition-colors">
-            pricing
+        <div className="flex items-center gap-5">
+          <Link href="/#pricing" className="text-sm text-[#8b8d91] hover:text-white transition-colors">
+            Pricing
           </Link>
           <Link href="/generate">
-            <Button size="sm" className="bg-white text-black hover:bg-zinc-200 font-mono text-xs h-8">
-              generate
+            <Button size="sm" className="bg-[#2f53f7] hover:bg-[#2545d4] text-white text-sm h-9 px-5 rounded-lg">
+              Generate
             </Button>
           </Link>
         </div>
